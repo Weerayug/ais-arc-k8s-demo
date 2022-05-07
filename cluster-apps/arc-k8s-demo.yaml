@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: arc-k8s-demo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: arc-k8s-demo
@@ -41,8 +41,8 @@ metadata:
   labels:
     name: arc-k8s-demo
 spec:
-  type: LoadBalancer
   ports:
   - port: 8080
   selector:
     app: arc-k8s-demo
+  type: LoadBalancer   
